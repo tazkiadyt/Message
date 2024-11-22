@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin: 20px;
+        color: #333;
+        font-family: "Caveat", cursive;
+        font-size: 2.5rem; 
+      }
+      #lyrics-container {
+        width: 90%; 
+        max-width: 600px; 
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ccc;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        min-height: 100px;
+        font-size: 1.2rem; 
+        animation: fadeIn 2s ease-in-out;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem; 
+        }
+        #lyrics-container {
+          font-size: 1rem; 
+        }
+      }
+    </style>
+</head>
+<body>
+    <audio
+      id="audio"
+      src="WhatsApp Audio 2024-11-22 at 13.49.54_a16600b5.mp3"
+      loop
+      preload="auto"
+    ></audio>
+    <h1>❤️ This Message For You ❤️</h1>
+    <div id="lyrics-container">
+      Hallo Ananda Sayangku 😊, sebelumnya maafin akuu yaa yang kemarin-kemarin udah nyakitin hati kamu yang kecil ituu hihi,
+      aku ngebuat pesan ini untuk ngungkapin perasaan akuu selama ini. Dan yaa aku tau cinta itu tidak selalu tentang senang nya aja, 
+      ada kala susahnya dan aku menganggap kamu itu bagaikan langit jika aku menyukai langit, maka aku juga harus siap memaklumi hujan dan petirnya.
+      Aku juga bingung disini mau ngungkapin apa lagi soalnya ga bisa semua aku ungkapin hihi, dan aku juga mau bilang makasihh yaa udah ngenalin apa itu arti cinta 
+      dalam hidup akuu i appreciate what you provide 🫶, and I want to say it once again I LOVE YOU ❤️❤️. Jangan marah - marah terus yaa cantikk nanti 
+      cantiknya ilangg dong kalo marah - marah muluu hihi 😁. Mungkin segini saja aku ngungkapin perasaan akuu selama ini yang aku pendam, have a nice day sayanggg.
+    </div>
+    <button onclick="window.location.href='../index.html'">Kembali</button>
+    <script>
+      const audio = document.getElementById("audio");
+
+      if (localStorage.getItem("musicPlaying") === "true") {
+        audio.play();
+      } else {
+        audio.play();
+        localStorage.setItem("musicPlaying", "true");
+      }
+
+      window.addEventListener("beforeunload", function () {
+        localStorage .setItem("musicPlaying", false);
+      });
+    </script>
+  </body>
+</html>
